@@ -83,6 +83,11 @@ const sessionOptions={
 //   res.send("working")
 // } );
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
+
 app.use(session (sessionOptions));
 app.use(flash());
 
